@@ -21,10 +21,9 @@ allprojects {
 }
 
 subprojects {
-    def androidHome
-
-    if ((androidHome = System.env.'ANDROID_HOME')
-            && (androidHome = androidHome as File).exists()
-            && androidHome.canWrite())
-        apply plugin: 'android-sdk-manager'
+    //def androidHome
+    //if ((androidHome = System.env.'ANDROID_HOME')
+    //        && (androidHome = androidHome as File).exists()
+    //        && androidHome.canWrite())
+    //    apply plugin: 'android-sdk-manager'
 }
