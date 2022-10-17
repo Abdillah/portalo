@@ -31,4 +31,8 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build
-      run: ./tools/build-debug
+      run: ./tools/build-debug; ls -lah term/build/outputs/apk/debug/*
+    - uses: actions/upload-artifact@v3
+      with:
+        name: apk-file
+        path: term/build/outputs/apk/debug/
